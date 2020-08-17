@@ -1,5 +1,12 @@
 <template>
   <div id="app">
+    <br>  
+    <div>
+    <img alt="Vue logo" src="../src/assets/logo.png">
+    <h1>
+    Buy My Shoe
+    </h1>
+    </div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
