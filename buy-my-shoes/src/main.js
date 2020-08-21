@@ -16,15 +16,17 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
-var databaseRef = firebase.database().ref("users/")
+var databaseRef = firebase.database().ref("posts/")
 
-
-
-  databaseRef.set({
-    username: "cyrille",
-    // email: email,
-    // profile_picture : imageUrl
-  })
+databaseRef.set({
+  title: "lol"
+  // title: this.$store.state.title,
+  // price: this.$store.state.price,
+  // description: this.$store.state.description,
+  // size: this.$store.state.size,
+  // condition: this.$store.state.condition,
+  // contactInfo: this.$store.state.contactInfo
+})
 
 new Vue({
   router,

@@ -3,7 +3,7 @@
     <h1 id="post">post</h1>
     <label for="title">Title:</label>
     <br />
-    <input type="text" id="title" name="title" placeholder="Title for post" />
+    <input type="text" id="title" name="title" v-model="title" placeholder="Title for post" />
     <br />
     <label for="price">Price:</label>
     <br />
@@ -68,8 +68,78 @@
     <br />
     <input type="text" id="contact" placeholder="Phone number & name" name="contact" />
     <br />
-    <button class="submit">Post</button>
+    <button @click="onClick" class="submit">Post</button>
     <br />
   </div>
 </template>
 
+<script>
+export default {
+  computed: {
+    title: {
+      get() {
+       return this.$store.state.title;
+      },
+      set(title) {
+        this.$store.commit("setTitle", title);
+      }
+    },
+    price: {
+      get() {
+       return this.$store.state.price;
+      },
+      set(price) {
+        this.$store.commit("setPrice", price);
+      }
+    },
+    description: {
+      get() {
+       return this.$store.state.description;
+      },
+      set(description) {
+        this.$store.commit("setDescription", description);
+      }
+    },
+    size: {
+      get() {
+       return this.$store.state.size;
+      },
+      set(size) {
+        this.$store.commit("setSize", size);
+      }
+    },
+    condition: {
+      get() {
+       return this.$store.state.condition;
+      },
+      set(condition) {
+        this.$store.commit("setCondition", condition);
+      }
+    },
+    contactinfo: {
+      get() {
+       return this.$store.state.contactInfo;
+      },
+      set(contactInfo) {
+        this.$store.commit("setContactInfo", contactInfo);
+      }
+    }
+  },
+  
+  methods: {
+    onClick() {
+
+      //post data to database
+      this.title = ""
+      this.price = ""
+      this.description = ""
+      this.size = ""
+      this.condition = ""
+      this.contactinfo = ""
+
+      console.log(this.$store.state.title)
+      
+    }
+  }
+}
+</script>
