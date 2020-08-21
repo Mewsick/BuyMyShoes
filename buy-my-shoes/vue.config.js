@@ -1,9 +1,9 @@
 module.exports = {
     pwa: {
         manifestOptions: {
-            background_color: 'blue'
+            background_color: '#b9d8c2'
         },
         name: "Buy My Shoes",
-        themeColor: 'yellow'
+        themeColor: '#8aa1b1'
     }
 }
