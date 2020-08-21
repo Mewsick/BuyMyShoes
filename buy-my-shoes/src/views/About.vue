@@ -7,7 +7,7 @@
     <br />
     <label for="price">Price:</label>
     <br />
-    <input type="text" id="price" name="price" placeholder="Price for shoes" />
+    <input type="number" id="price" name="price" placeholder="Price for shoes" />
     <br />
     <label for="description">Description:</label>
     <br />
