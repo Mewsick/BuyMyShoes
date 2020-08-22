@@ -9,7 +9,8 @@ module.exports = {
             runtimeCaching: [
                 {
                     handler: 'NetworkFirst',
-                    urlPattern: '/api/posts'
+                    urlPattern: 'http://localhost:3000/posts',
+                    urlPattern: 'http://localhost:3000/createpost'
                 }
             ]
         }
