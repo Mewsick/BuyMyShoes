@@ -4,7 +4,15 @@ module.exports = {
             background_color: '#b9d8c2'
         },
         name: "Buy My Shoes",
-        themeColor: '#8aa1b1'
+        themeColor: '#8aa1b1',
+        workboxOptions: {
+            runtimeCaching: [
+                {
+                    handler: 'NetworkFirst',
+                    urlPattern: '/api/posts'
+                }
+            ]
+        }
     },
 
     // http://localhost:8080/api/posts
