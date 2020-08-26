@@ -30,7 +30,7 @@ export default {
     HelloWorld
   },
   created() {
-    fetch("http://localhost:3000/posts")
+    fetch("/api/posts")
       .then(response => response.json())
       .then(result => {
         this.allPosts = result;

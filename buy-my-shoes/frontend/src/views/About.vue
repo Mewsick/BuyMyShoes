@@ -146,7 +146,7 @@ export default {
 
   methods: {
     onClick() {
-      fetch("http://localhost:3000/createpost", {
+      fetch("/api/createpost", {
         body: JSON.stringify({
           title: this.title,
           price: this.price,
