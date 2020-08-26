@@ -27,7 +27,6 @@ app.post('/createpost', (req, response) => {
     database.run(`INSERT INTO posts VALUES (?,?,?,?,?,?)`, [req.body.title, req.body.price, req.body.description, req.body.size, req.body.condition, req.body.contactInfo])
         .then(() => {
             response.status(200).send()
-            console.log(req.body);
         })
 })
 
